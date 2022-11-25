@@ -21,7 +21,7 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'task' => $this->faker->sentence(),
-            //'photo'=>'https://source.unsplash.com/random/800x600' Man muss in user.blade.php File img src "/storage/" entfernen um Bilder zu sehen
+            //'photo'=>'https://source.unsplash.com/random/800x600' Man muss in storage/views/user.blade.php File img src "/storage/" entfernen um Bilder zu sehen
         ];
     }
 
