@@ -12,11 +12,11 @@
     </nav>
         <span class="text-5xl flex mt-4 justify-center">Welcome</span>
     <main class="mx-32 my-16">
-        <div class="text-3xl">
-            Willkommen zu PhotoRedactor<span class="text-sm">©</span>
+        <div class="text-3xl flex">
+            Willkommen zu PhotoRedactor<span class="text-sm flex items-start">©</span>
         </div>
         <div>
-            <a href="/upload" class="mt-8 absolute">Laden Sie Ihre Foto hoch!</a>
+            <a href="/upload" class="mt-8 absolute font-semibold">Laden Sie Ihre Foto hoch!</a>
         </div>
     </main>
 </section>
