@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('photo')->nullable();
+            $table->unsignedBigInteger('photo_id')->nullable();
             $table->string('task')->nullable();
             $table->boolean('extra')->default('0');
+            $table->string('password');
             $table->timestamps();
         });
     }

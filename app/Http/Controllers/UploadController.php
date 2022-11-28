@@ -15,8 +15,8 @@ class UploadController extends Controller
         $attributes = request()->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'photo' => 'required|image',
-            'task' => "required"
+            'photo_id' => 'required|image',
+            'task' => "required",
         ]);
         if(filter_has_var(INPUT_POST,'extra')) {
             $attributes['extra'] = 1;
@@ -25,6 +25,6 @@ class UploadController extends Controller
         $attributes['photo'] = request()->file('photo')->store('photos');
 
         User::create($attributes);
-        return redirect('/guest');
+        return redirect('/');
      }
 }

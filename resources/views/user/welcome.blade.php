@@ -9,7 +9,6 @@
 <section>
     <nav class="flex justify-end">
         <span class="flex text-base m-8 text-right" ><a href="/login">Anmelden</a></span>
-        <span class="flex text-base m-8 text-right" ><a href="/register">Regestrieren</a></span>
     </nav>
         <span class="text-5xl flex mt-4 justify-center">Welcome</span>
     <main class="mx-32 my-16">

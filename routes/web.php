@@ -5,6 +5,9 @@ use App\Models\User;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GuestController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,36 +19,19 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/guest', function () {
-    return view('welcome',[
-        'users' => User::all()
-    ]);
-});
-Route::get('/', function () {
-    if (auth()->guest()){
-        return redirect('/guest');
-    }
-    $users = User::latest();
-    if(request('search')){
-        $users->where('name', 'like', '%' . request('search') . '%');
-    }
-    return view('admin.welcome',[
-    'users' => $users->get()
-    ]);
-});
+Route::get('/', [GuestController::class, 'index']);
 
-Route::get('user/{user}', function ($id) {
-    if (auth()->guest()){
-        return redirect('/login');
-    }
-    return view('user',[
-        'user' => User::find($id)]);
-    }
-);
+Route::get('/admin', [AdminController::class, 'show'])->middleware('admin');
+
+Route::get('user/{user:id}', [AdminController::class, 'find'])->middleware('admin');
+
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+
 Route::get('login', [LoginController::class, 'login'])->middleware('guest');
 Route::post('login', [LoginController::class, 'store']);
 
-Route::get('logout', [LoginController::class, 'destroy']);
+Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
 
 Route::get('upload', [UploadController::class, 'upload']);
 Route::post('upload', [UploadController::class, 'store']);

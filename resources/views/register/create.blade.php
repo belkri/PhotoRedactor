@@ -1,16 +1,32 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Photo Redactor</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
+    <meta charset="UTF-8">
+    <title>Document</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<section class="px-6 py-6 bg-violet-500 h-screen flex items-center justify-center">
-        <main class="max-w-lg mx-auto w-1/4 mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
-            <h1 class="text-center font-bold text-3xl">Log In!</h1> 
+<body class=" bg-violet-500">
+    <section class="px-6 py-8">
+        <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
+            <h1 class="text-center font-bold text-xl">Register!</h1>
 
-            <form method="POST" action="/login" class="mt-10">
+            <form method="POST" action="/register" class="mt-10">
                 @csrf
+
+                <div class="mb-6">
+                    <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
+                           for="name"
+                    >
+                        Name
+                    </label>
+
+                    <input class="border border-gray-400 p-2 w-full"
+                           type="text"
+                           name="name"
+                           id="name"
+                           required
+                    >
+                </div>
 
                 <div class="mb-6">
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
@@ -25,9 +41,6 @@
                            id="email"
                            required
                     >
-                    @error('email')
-                        <p class="text-red-500 text-sm">{{ $message }}</p>
-                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -43,19 +56,21 @@
                            id="password"
                            required
                     >
-                    @error('password')
-                        <p class="text-red-500 text-sm">{{ $message }}</p>
-                    @enderror
+                </div>
                 </div>
                     <input type="checkbox" onclick="myFunction()" class="ml-4">Show Password
                 </div>
+
                 <div class="mb-6">
                     <button type="submit"
-                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 ml-80" 
+                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
                     >
                         Submit
                     </button>
                 </div>
+            </form>
+        </main>
+    </section>
                 <script>
                 function myFunction() {
                 var x = document.getElementById("password");
@@ -65,7 +80,5 @@
                     x.type = "password";
                 }
                 } </script>
-            </form>
-        </main>
-    </section>
+</body>
 </html>

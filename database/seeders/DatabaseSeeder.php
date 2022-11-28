@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\user;
 use App\Models\Admin;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,13 +18,15 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(10)->create();
 
-        Admin::factory()->count(2)->sequence(
+        User::factory()->count(2)->sequence(
         ['name' => 'Bebrik',
         'email' => 'bebra@gmail.com',
-        'password' => bcrypt('bebrabebra')
+        'password' => bcrypt('bebrabebra'),
+        'task' => ''
         ],['name' => 'extra',
            'email' => 'example@gmail.com',
-           'password' => bcrypt('password')
+           'password' => bcrypt('password'),
+           'task' => ''
         ])->create();
     }
 }
