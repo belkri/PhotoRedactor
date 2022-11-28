@@ -8,4 +8,6 @@ Run "php artisan key:generate".
 
 Run "composer update".
 
+Run "php artisan storage:link".
+
 Sie sind bereit!
