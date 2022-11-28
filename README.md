@@ -4,6 +4,8 @@ Wo name für Name von ihrer Projekt steht.
 
 Den .env.exapmle in .env umbennen.
 
-Run php artisan key:generate
+Run php artisan key:generate.
+
+Run "composer update".
 
 Sie sind bereit!
