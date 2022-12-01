@@ -9,12 +9,10 @@ use Illuminate\Http\Request;
 class UploadController extends Controller
 {
     public function upload(){
-        return view('upload.create');
+        return view('user.create');
     }
     public function store(){
         $attributes = request()->validate([
-            'name' => 'required',
-            'email' => 'required|email',
             'photo_id' => 'required|image',
             'task' => "required",
         ]);

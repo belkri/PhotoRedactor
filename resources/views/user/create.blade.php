@@ -7,48 +7,13 @@
 </head>
 <body class="bg-violet-500 h-full">
     <div class="flex items-center text-white">
-        <a href="/guest" class="flex m-4 text-lg"><span class="flex font-bold">⇦</span>Zurück</a>
+        <a href="/" class="flex m-4 text-lg"><span class="flex font-bold">⇦</span>Zurück</a>
     </div>
     <section class="flex items-center justify-center">
         <main class=" m-8 px-4 py-4 w-1/4 border b rounded-xl bg-gray-200">
             <h1 class="text-4xl flex justify-center">Senden Sie Ihre Foto!</h1>
                 <form method="POST" action="/upload" class="mt-10" enctype="multipart/form-data">
                     @csrf
-
-                    <div class="mb-6">
-                        <label class="flex block mb-2 uppercase font-bold text-xs"
-                            for="name"
-                        >
-                            Ihre Name
-                        </label>
-
-                        <input class="border border-gray-400 p-2 w-full"
-                            type="text"
-                            name="name"
-                            id="name"
-                            required
-                        >
-                        @error('name')
-                            <p class="color: red; font-size: small">{{ $message }}</p>
-                        @enderror
-                    </div>
-                    <div class="mb-6">
-                        <label class="flex block mb-2 uppercase font-bold text-xs"
-                            for="email"
-                        >
-                            Email
-                        </label>
-
-                        <input class="border border-gray-400 p-2 w-full"
-                            type="email"
-                            name="email"
-                            id="email"
-                            required
-                        >
-                        @error('email')
-                            <p class="color: red; font-size: small">{{ $message }}</p>
-                        @enderror
-                    </div>
                     <div class="mb-6">
                         <label class="flex block mb-2 uppercase font-bold text-xs"
                             for="photo"
@@ -56,7 +21,7 @@
                             Ihre Photo
                         </label>
 
-                        <input class="border border-gray-400 p-2 w-full bg-white"
+                        <input class="border border-gray-400 py-8 px-2 w-full bg-white"
                             type="file"
                             name="photo"
                             id="photo"

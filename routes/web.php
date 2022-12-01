@@ -17,9 +17,11 @@ use App\Http\Controllers\RegisterController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/Auth::routes();
 
 Route::get('/', [GuestController::class, 'index']);
+
+Route::get('/guest', [GuestController::class, 'show']);
 
 Route::get('/admin', [AdminController::class, 'show'])->middleware('admin');
 

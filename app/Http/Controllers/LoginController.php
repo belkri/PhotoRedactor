@@ -18,7 +18,7 @@ class LoginController extends Controller
 
         if (auth()->attempt($attributes)) {
 
-            return redirect('/')->with('success', 'Welcome Back!');
+            return redirect('/admin')->with('success', 'Welcome Back!');
         }
         return back()
         ->withInput()
@@ -28,6 +28,6 @@ class LoginController extends Controller
     {
         auth()->logout();
 
-        return redirect('/guest')->with('success', 'Goodbye!');
+        return redirect('/')->with('success', 'Goodbye!');
     }
 }

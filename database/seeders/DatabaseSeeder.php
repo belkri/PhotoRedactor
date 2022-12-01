@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(10)->create();
 
+        // \App\Models\Photo::factory(4)->create();
         User::factory()->count(2)->sequence(
         ['name' => 'Bebrik',
         'email' => 'bebra@gmail.com',

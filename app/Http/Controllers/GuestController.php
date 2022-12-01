@@ -11,5 +11,8 @@ class GuestController extends Controller
     return view('welcome',[
         'users' => User::all()
     ]);
-}
+    }
+    public function show(){
+        return view('user.welcome');
+    }
 }

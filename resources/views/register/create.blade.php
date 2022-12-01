@@ -47,7 +47,7 @@
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                            for="password"
                     >
-                        Password
+                        Password<span class="text-gray-500 normal-case">(Min. 7 Zeichen)</span>
                     </label>
 
                     <input class="border border-gray-400 p-2 w-full"
