@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -12,17 +13,20 @@ class UploadController extends Controller
         return view('user.create');
     }
     public function store(){
+        $user = auth()->user()->id;
+
         $attributes = request()->validate([
-            'photo_id' => 'required|image',
+            'photo' => 'required|image',
             'task' => "required",
         ]);
         if(filter_has_var(INPUT_POST,'extra')) {
             $attributes['extra'] = 1;
-       }
+       };
+       $attributes['user_id'] = $user;
 
         $attributes['photo'] = request()->file('photo')->store('photos');
 
-        User::create($attributes);
-        return redirect('/');
+        Photo::create($attributes);
+        return redirect('/guest');
      }
 }

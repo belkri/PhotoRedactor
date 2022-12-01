@@ -6,7 +6,7 @@
 </head>
 <body class="flex bg-teal-200 h-screen">
     <div>
-    <a class="m-10 flex" href="/">Zurück</a>
+    <a class="m-10 flex" href="/admin">Zurück</a>
     </div>
     <main class="text-lg font-bold mt-12 px-4 py-4">
         <h2 class="m-4">Name: <?= $user->name ?></h2>

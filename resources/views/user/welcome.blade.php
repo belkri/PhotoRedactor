@@ -10,8 +10,8 @@
     <nav class="flex justify-end">
         
     <nav class="flex justify-end">    
-            <span class="flex text-base m-4 text-left" ><a href="/guest">Guest Page</a></span>
-            <span class="flex text-base m-4 text-right" ><a href="/logout">Log Out</a></span>
+            <span class="flex text-base m-6 text-left" ><a href="/guest">Guest Page</a></span>
+            <span class="flex text-base m-6 text-right" ><a href="/logout">Log Out</a></span>
         </nav>
     </nav>
         <span class="text-5xl flex mt-4 justify-center">Welcome</span>

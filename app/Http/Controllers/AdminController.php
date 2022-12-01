@@ -12,9 +12,6 @@ class AdminController extends Controller
     if (auth()->guest()){
         return redirect('/');
     }
-    if (auth()->auth()){
-        return redirect('/guest');
-    }
     $users = User::latest();
     if(request('search')){
         $users->where('name', 'like', '%' . request('search') . '%');

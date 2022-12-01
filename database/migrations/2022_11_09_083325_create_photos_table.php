@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeonDelete();
             $table->string('photo');
+            $table->string('task')->nullable();
+            $table->boolean('extra')->default('0');
             $table->timestamps();
         });
     }

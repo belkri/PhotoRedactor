@@ -22,12 +22,10 @@ class DatabaseSeeder extends Seeder
         User::factory()->count(2)->sequence(
         ['name' => 'Bebrik',
         'email' => 'bebra@gmail.com',
-        'password' => bcrypt('bebrabebra'),
-        'task' => ''
+        'password' => bcrypt('bebrabebra')
         ],['name' => 'extra',
            'email' => 'example@gmail.com',
-           'password' => bcrypt('password'),
-           'task' => ''
+           'password' => bcrypt('password')
         ])->create();
     }
 }

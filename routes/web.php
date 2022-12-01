@@ -21,19 +21,19 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', [GuestController::class, 'index']);
 
-Route::get('/guest', [GuestController::class, 'show']);
+Route::get('guest', [GuestController::class, 'show']);
 
-Route::get('/admin', [AdminController::class, 'show'])->middleware('admin');
+Route::get('admin', [AdminController::class, 'show']);
 
 Route::get('user/{user:id}', [AdminController::class, 'find'])->middleware('admin');
 
-Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
-Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+Route::get('register', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
 
-Route::get('login', [LoginController::class, 'login'])->middleware('guest');
+Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'store']);
 
-Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
+Route::get('logout', [LoginController::class, 'destroy']);
 
 Route::get('upload', [UploadController::class, 'upload']);
 Route::post('upload', [UploadController::class, 'store']);

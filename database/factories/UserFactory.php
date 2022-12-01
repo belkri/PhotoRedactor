@@ -20,7 +20,6 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'task' => $this->faker->sentence(),
             'password' => bcrypt(fake()->password())
             //'photo'=>'https://source.unsplash.com/random/800x600' Man muss in storage/views/user.blade.php File img src "/storage/" entfernen um Bilder zu sehen
         ];
