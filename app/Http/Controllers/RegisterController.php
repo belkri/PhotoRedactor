@@ -22,7 +22,7 @@ class RegisterController extends Controller
 
         $attributes['password'] = bcrypt($attributes['password']);
 
-        User::create($attributes);
+        auth()->login(User::create($attributes));
 
         return redirect('guest')->with('success', 'Your account has been created.');
     }

@@ -13,15 +13,19 @@ class AdminController extends Controller
     if (auth()->user()->email !== 'bebra@gmail.com'){
         return redirect('/');
     }
-    $users = User::latest();
+    $users = User::all();
     if(request('search')){
-        $users->where('name', 'like', '%' . request('search') . '%');
+        $users = User::where('name', 'like', '%' . request('search') . '%')->get();
     }
     return view('admin.welcome',[
-    'users' => $users->get()
+    'users' => $users
     ]);
 }
     public function find($id){
+        
+    if (auth()->user()->email !== 'bebra@gmail.com'){
+        return redirect('/');
+    }
     if (auth()->guest()){
         return redirect('/login');
     }

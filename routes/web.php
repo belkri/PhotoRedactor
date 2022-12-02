@@ -5,7 +5,6 @@ use App\Models\User;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\GuestController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegisterController;
 /*
@@ -19,21 +18,23 @@ use App\Http\Controllers\RegisterController;
 |
 */Auth::routes();
 
-Route::get('/', [GuestController::class, 'index']);
+Route::get('/', [UserController::class, 'index'])->middleware('guest');
 
-Route::get('guest/{user:id}', [GuestController::class, 'show'])->middleware('auth');
+Route::get('guest', [UserController::class, 'show'])->middleware('auth');
+
+Route::get('profile', [UserController::class, 'profile']);
 
 Route::get('admin', [AdminController::class, 'show'])->middleware('admin');
 
 Route::get('user/{user:id}', [AdminController::class, 'find'])->middleware('admin');
 
-Route::get('register', [RegisterController::class, 'create']);
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store']);
 
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login', [LoginController::class, 'store']);
 
-Route::get('logout', [LoginController::class, 'destroy']);
+Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
 
-Route::get('upload', [UploadController::class, 'upload']);
+Route::get('upload', [UploadController::class, 'upload'])->middleware('auth');
 Route::post('upload', [UploadController::class, 'store']);
