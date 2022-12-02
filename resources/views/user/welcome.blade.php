@@ -13,7 +13,7 @@
             <span class="flex text-base m-6 text-right" ><a href="/logout">Log Out</a></span>
         </nav>
     </nav>
-        <span class="text-5xl flex mt-4 justify-center">Welcome</span>
+        <span class="text-5xl flex mt-4 justify-center">Welcome, {{ $user->name }}</span>
     <main class="mx-32 my-16">
         <div class="text-3xl flex">
             Willkommen zu PhotoRedactor<span class="text-sm flex items-start">©</span>

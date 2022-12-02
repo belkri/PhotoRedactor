@@ -18,7 +18,7 @@ class AdminsOnly
     public function handle(Request $request, Closure $next)
     {
         if(auth()->user()?->email !== 'bebra@gmail.com'){
-            redirect('/register');
+            redirect('/guest');
         }
         return $next($request);
     }

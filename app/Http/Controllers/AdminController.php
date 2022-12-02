@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function show(){
 
-    if (auth()->guest()){
+    if (auth()->user()->email !== 'bebra@gmail.com'){
         return redirect('/');
     }
     $users = User::latest();

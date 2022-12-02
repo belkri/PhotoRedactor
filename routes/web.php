@@ -21,7 +21,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', [GuestController::class, 'index']);
 
-Route::get('guest', [GuestController::class, 'show']);
+Route::get('guest/{user:id}', [GuestController::class, 'show'])->middleware('auth');
 
 Route::get('admin', [AdminController::class, 'show'])->middleware('admin');
 

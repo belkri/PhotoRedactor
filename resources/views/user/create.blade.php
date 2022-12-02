@@ -21,7 +21,7 @@
                             Ihre Photo
                         </label>
 
-                        <input class="border border-gray-400 py-8 px-2 w-full bg-white"
+                        <input class="border border-gray-400 py-8 px-2 w-full bg-white flex justify-center cursor-pointer"
                             type="file"
                             name="photo"
                             id="photo"
