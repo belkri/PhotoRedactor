@@ -9,6 +9,9 @@ use App\Models\Photo;
 class AdminController extends Controller
 {
     public function show(){
+        if (auth()->guest()){
+            abort(403);
+        }
 
     if (auth()->user()->email !== 'bebra@gmail.com'){
         return redirect('/');
@@ -22,6 +25,9 @@ class AdminController extends Controller
     ]);
 }
     public function find($id){
+    if (auth()->guest()){
+        abort(403);
+    }
         
     if (auth()->user()->email !== 'bebra@gmail.com'){
         return redirect('/');
@@ -29,7 +35,7 @@ class AdminController extends Controller
     if (auth()->guest()){
         return redirect('/login');
     }
-    return view('user',[
+    return view('admin.user',[
         'user' => User::find($id),
         'photos' => User::find($id)->photo
     ]);

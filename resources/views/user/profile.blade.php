@@ -23,7 +23,7 @@
                         <?php 
                             if($photo->extra) :
                                 ?>
-                                    <div class="text-red-500 text-6xl rounded-full flex items-start h-96 w-96 ml-24 justify-end cursor-default"><?= '!'; ?></div>
+                                    <div class="text-red-500 text-6xl flex items-start h-96 w-96 ml-24 justify-end cursor-default"><?= '!'; ?></div>
                                 <?php
                             endif;
                         ?>

@@ -5,8 +5,8 @@
     <title>Document</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class=" bg-violet-500">
-    <section class="px-6 py-8">
+<body class="bg-violet-500">
+    <section class=" h-screen px-6 py-8 mt-48">
         <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
             <h1 class="text-center font-bold text-xl">Register!</h1>
 
@@ -32,7 +32,7 @@
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                            for="email"
                     >
-                        Email
+                        Email<span class="text-gray-500 normal-case">(Sie bekommen keinen Spam <span class="text-base">&#128521</span>)</span>
                     </label>
 
                     <input class="border border-gray-400 p-2 w-full"
@@ -71,14 +71,14 @@
             </form>
         </main>
     </section>
-                <script>
-                function myFunction() {
-                var x = document.getElementById("password");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-                } </script>
+<script>
+    function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+    x.type = "text";
+    } else {
+    x.type = "password";
+    }
+} </script>
 </body>
 </html>
