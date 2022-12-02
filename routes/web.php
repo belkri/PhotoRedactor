@@ -23,7 +23,7 @@ Route::get('/', [GuestController::class, 'index']);
 
 Route::get('guest', [GuestController::class, 'show']);
 
-Route::get('admin', [AdminController::class, 'show']);
+Route::get('admin', [AdminController::class, 'show'])->middleware('admin');
 
 Route::get('user/{user:id}', [AdminController::class, 'find'])->middleware('admin');
 

@@ -13,7 +13,6 @@ class UploadController extends Controller
         return view('user.create');
     }
     public function store(){
-        $user = auth()->user()->id;
 
         $attributes = request()->validate([
             'photo' => 'required|image',
@@ -22,7 +21,7 @@ class UploadController extends Controller
         if(filter_has_var(INPUT_POST,'extra')) {
             $attributes['extra'] = 1;
        };
-       $attributes['user_id'] = $user;
+       $attributes['user_id'] = 31;
 
         $attributes['photo'] = request()->file('photo')->store('photos');
 

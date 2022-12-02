@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Photo;
 class AdminController extends Controller
 {
     public function show(){
@@ -25,6 +26,8 @@ class AdminController extends Controller
         return redirect('/login');
     }
     return view('user',[
-        'user' => User::find($id)]);
-    }
+        'user' => User::find($id),
+        'photos' => User::find($id)->photo
+    ]);
+}
 }
