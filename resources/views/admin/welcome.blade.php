@@ -5,11 +5,10 @@
 <meta name="keywords" content="html tutorial template">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-teal-200 h-full">
-    
+<body class="bg-teal-400 h-full">
         <nav class="flex justify-end">    
-            <span class="flex text-base m-4 text-left" ><a href="/guest">Guest Page</a></span>
-            <span class="flex text-base m-4 text-right" ><a href="/logout">Log Out</a></span>
+            <span class="flex text-base m-8 text-left" ><a href="/guest">Guest Page</a></span>
+            <span class="flex text-base m-8 text-right" ><a href="/logout">Log Out</a></span>
         </nav>
     <section class="">
             <span><a href="/" class="text-5xl flex mt-12 justify-center">Welcome</a></span>
@@ -24,8 +23,12 @@
             <span>
                 <?php foreach ($users as $user){ ?>
                     <div class="mt-3 ml-64 text-xl"><a href="user/{{$user->id}}">
-                        Show User <?= $user->name; 
-                ?></div><?php } ?></a>
+                        User
+                        <span class="font-bold text-2xl">
+                            <?= $user->name; ?>
+                        </span> 
+                        anzeigen
+                </div><?php } ?></a>
             </span>
         </main>
     </section>

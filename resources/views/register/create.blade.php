@@ -5,8 +5,11 @@
     <title>Document</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-violet-500">
-    <section class=" h-screen px-6 py-8 mt-48">
+<body class="h-full bg-violet-500">
+
+    <a class="m-10 flex relative text-white flex" href="/">Zurück</a>
+
+    <section class="px-6 py-8 mt-32">
         <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
             <h1 class="text-center font-bold text-xl">Register!</h1>
 
@@ -24,8 +27,13 @@
                            type="text"
                            name="name"
                            id="name"
+                           value="{{ old('name')}}"
                            required
                     >
+                    
+                    @error('name')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-6">
@@ -39,11 +47,15 @@
                            type="email"
                            name="email"
                            id="email"
+                           value="{{ old('email')}}"
                            required
                     >
+                    @error('email')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-4">
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                            for="password"
                     >
@@ -56,15 +68,17 @@
                            id="password"
                            required
                     >
+                    @error('password')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
                 </div>
-                    <input type="checkbox" onclick="myFunction()" class="ml-4">Show Password
+                    <input type="checkbox" onclick="myFunction()" class="m-4 ml-0">Password zeigen
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-2 flex justify-end">
                     <button type="submit"
-                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
-                    >
+                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">
                         Submit
                     </button>
                 </div>

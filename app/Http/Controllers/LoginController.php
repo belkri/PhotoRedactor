@@ -20,9 +20,7 @@ class LoginController extends Controller
 
             return redirect('/admin')->with('success', 'Welcome Back!');
         }
-        return back()
-        ->withInput()
-        ->withErrors(['email' => 'Email does not exist']);
+        return back();
     }
     public function destroy()
     {

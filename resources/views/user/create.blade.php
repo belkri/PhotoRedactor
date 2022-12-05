@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-violet-500 h-full">
+<body class="bg-amber-400 h-full">
     <div class="flex items-center text-white">
         <a href="/" class="flex m-4 text-lg"><span class="flex font-bold">⇦</span>Zurück</a>
     </div>

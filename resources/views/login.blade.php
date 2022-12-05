@@ -5,7 +5,9 @@
 <meta name="keywords" content="html tutorial template">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<section class="px-6 py-6 bg-violet-500 h-screen flex items-center justify-center">
+<body class=" bg-violet-500 h-full">
+    <a class="m-10 flex relative text-white flex" href="/">Zurück</a>
+<section class="px-6 py-6 flex items-center justify-center mt-32">
         <main class="max-w-lg mx-auto w-1/4 mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
             <h1 class="text-center font-bold text-3xl">Log In!</h1> 
 
@@ -23,6 +25,7 @@
                            type="email"
                            name="email"
                            id="email"
+                           value="{{ old('email') }}"
                            required
                     >
                     @error('email')
@@ -47,7 +50,7 @@
                         <p class="text-red-500 text-sm">{{ $message }}</p>
                     @enderror
                 </div>
-                    <input type="checkbox" onclick="myFunction()" class="ml-4">Show Password
+                    <input type="checkbox" onclick="myFunction()" class="m-4 ml-0">Password zeigen
                 </div>
                 <div class="mb-6">
                     <button type="submit"
@@ -56,6 +59,7 @@
                         Submit
                     </button>
                 </div>
+                    <a class="flex justify-center underline" href="forgot-password">Passwort vergessen? Hier clicken</a>
                 <script>
                 function myFunction() {
                 var x = document.getElementById("password");
@@ -69,3 +73,4 @@
         </main>
     </section>
 </html>
+</body>

@@ -4,7 +4,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
-<body class="flex bg-teal-200 h-screen">
+<body class="flex bg-teal-400 h-screen">
     <div>
     <a class="m-10 flex" href="/admin">Zurück</a>
     </div>
