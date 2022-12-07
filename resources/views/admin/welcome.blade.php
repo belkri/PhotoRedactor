@@ -7,8 +7,8 @@
 </head>
 <body class="bg-teal-400 h-full">
         <nav class="flex justify-end">    
-            <span class="flex text-base m-8 text-left" ><a href="/guest">Guest Page</a></span>
-            <span class="flex text-base m-8 text-right" ><a href="/logout">Log Out</a></span>
+            <span class="flex text-base m-8" ><a href="/guest">Guest Page</a></span>
+            <span class="flex text-base m-8" ><a href="/logout">Log Out</a></span>
         </nav>
     <section class="">
             <span><a href="/" class="text-5xl flex mt-12 justify-center">Welcome</a></span>
