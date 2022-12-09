@@ -11,7 +11,7 @@
             <span class="flex text-base m-8" ><a href="/guest">Guest Page</a></span>
             <span class="flex text-base m-8" ><a href="/logout">Log Out</a></span>
         </nav>
-    <section class="">
+    <section class="mb-8">
             <span><a href="/" class="text-5xl flex mt-12 justify-center">Welcome</a></span>
         <main>
             <div class="flex justify-center ml-96">

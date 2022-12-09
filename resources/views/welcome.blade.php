@@ -12,7 +12,7 @@
         <span class="flex text-base m-8 text-right" ><a href="/login">Anmelden</a></span>
         <span class="flex text-base m-8 text-right" ><a href="/register">Registrieren</a></span>
     </nav>
-        <span class="text-5xl flex mt-4 justify-center">Welcome</span>
+        <span class="text-5xl flex mt-4 justify-center">Willkommen</span>
     <main class="mx-32 my-16">
         <div class="text-3xl flex">
             Willkommen zu PhotoRedactor<span class="text-sm flex items-start">©</span>
