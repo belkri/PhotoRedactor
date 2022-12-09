@@ -4,6 +4,7 @@
 <meta name="description" content="Our first page">
 <meta name="keywords" content="html tutorial template">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 </head>
 <body class="bg-teal-400 h-full">
         <nav class="flex justify-end">    

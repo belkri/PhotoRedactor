@@ -27,6 +27,6 @@ class UploadController extends Controller
         $attributes['photo'] = request()->file('photo')->store('photos');
 
         Photo::create($attributes);
-        return redirect('/guest');
+        return redirect('/guest')->with('success', 'Danke, das Sie unseren Service nutzen!');
      }
 }
