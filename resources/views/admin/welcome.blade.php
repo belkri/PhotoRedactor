@@ -32,5 +32,6 @@
             </span>
         </main>
     </section>
+    <x-flash />
 </body>
 </html>

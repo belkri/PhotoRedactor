@@ -21,5 +21,6 @@
         </div>
     </main>
 </section>
+<x-flash />
 </body>
 </html>
