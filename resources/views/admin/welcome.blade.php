@@ -17,7 +17,7 @@
             <div class="flex justify-center ml-96">
                 <form  method="GET" action="#">
                 <input type="text" name="search" placeholder="Search for..."
-                class="text-xl mt-8 mr-96 border border-gray-100 rounded-lg p-2"
+                class="text-xl mt-8 mr-96 border border-gray-100 rounded-lg p-2 w-96"
                 value="{{ request('search') }}">
                 </form>
             </div>
